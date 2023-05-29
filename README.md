@@ -132,7 +132,7 @@ You can deploy any service you want.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[make it as One page application]**
+- [ ] **Add Some Styling**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -166,6 +166,6 @@ I would like to say thank all co-authors and contributors
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./MIT) licensed.
+This project is [MIT](./MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
