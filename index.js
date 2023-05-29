@@ -1,52 +1,11 @@
-const books = [
-
-];
-const savedBooks = JSON.parse(sessionStorage.getItem('addBooks'));
-// add new book
-function addNew(e) {
-  e.preventDefault();
-
-  const title = document.querySelector('#title');
-  const author = document.querySelector('#author');
-  const id = books.length === 0 ? 0 : books[books.length - 1].id + 1;
-
-  const book = {
-    id,
-    title: title.value,
-    author: author.value,
-  };
-
-  books.push(book);
-  sessionStorage.setItem('addBooks', JSON.stringify(books));
-  showBooks();
-}
-
-function saveFormData(e) {
-  e.preventDefault();
-  const title = document.querySelector('#title');
-  const author = document.querySelector('#author');
-  const book = {
-    title: title.value,
-    author: author.value,
-  };
-  sessionStorage.setItem('addBooks', JSON.stringify(book));
-}
-
-function recallFormData() {
-  document.querySelector('#title').value = savedBooks.title;
-  document.querySelector('#author').value = savedBooks.author;
-}
-
-function removeBook(id) {
-  savedBooks.splice(id, 1);
-  showBooks();
-  sessionStorage.setItem('addBooks', JSON.stringify(savedBooks));
-}
-
 function showBooks() {
   const container = document.querySelector('.container');
+  const addBooks = JSON.parse(sessionStorage.getItem('addBooks'));
+  
+  const mybooks = addBooks ? addBooks : [];
+  
   container.innerHTML = '';
-  const bookCards = savedBooks.map((b) => `
+  const bookCards = mybooks.map((b) => `
     <ul style="list-style: none">
       <li>
         <h3>${b.title}</h3>
@@ -59,6 +18,40 @@ function showBooks() {
   container.innerHTML = bookCards.join('');
 }
 
+
+// add new book
+function addNew(e) {
+  e.preventDefault();
+
+  const title = document.querySelector('#title');
+  const author = document.querySelector('#author');
+  const addBooks = JSON.parse(sessionStorage.getItem('addBooks'));
+  
+  const mybooks = addBooks ? addBooks: []; 
+  
+  const id = mybooks.length === 0 ? 0 : mybooks[mybooks.length - 1].id + 1;
+
+  const book = {
+    id,
+    title: title.value,
+    author: author.value,
+  };
+
+  mybooks.push(book);
+  sessionStorage.setItem('addBooks', JSON.stringify(mybooks));
+  showBooks();
+}
+
+function removeBook(id) {
+  let addBooks = JSON.parse(sessionStorage.getItem('addBooks'));
+  addBooks = addBooks.filter(e => e.id !== id )
+  console.log(id, addBooks);
+
+  sessionStorage.setItem('addBooks', JSON.stringify(addBooks));
+  showBooks();
+}
+
+
 window.onload = () => {
   showBooks();
   document.querySelector('form').addEventListener('submit', addNew);
@@ -67,3 +60,7 @@ window.onload = () => {
 
 //   recallFormData();
 };
+
+showBooks();
+addNew();
+removeBook();
