@@ -18,7 +18,6 @@ function showBooks() {
   container.innerHTML = bookCards.join('');
 }
 
-
 // add new book
 function addNew(e) {
   e.preventDefault();
@@ -49,7 +48,6 @@ function removeBook(id) {
   sessionStorage.setItem('addBooks', JSON.stringify(addBooks));
   showBooks();
 }
-
 
 window.onload = () => {
   showBooks();

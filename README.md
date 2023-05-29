@@ -29,7 +29,7 @@
 
 # 📖 [Awesome Books] <a name="about-project"></a>
 
-**[Awesome books]** is a simple website that displays a list of books and allows you to add and remove books from that list.
+**Awesome books** is a simple website that displays a list of books and allows you to add and remove books from that list.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -38,7 +38,7 @@
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="#">js</a></li>
+    <li><a href="#">JS</a></li>
     <li><a href="#">HTML</a></li>
   </ul>
 </details>
@@ -47,10 +47,10 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Display Books]**
-- **[Add books with autor and title]**
-- **[Remove them]**
-- **[save the data in session storage]**
+- **Display Books**
+- **Add books with author and title**
+- **Remove them**
+- **save the data in session storage**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -58,7 +58,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://google.com)
+- [Live Demo Link](https://khanh-devos.github.io/awesome-books/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -67,16 +67,16 @@
 ## 💻 Getting Started <a name="getting-started"></a>
 
 - Open your Terminal
-- Navigate to the desired directory[folder] to which you want to clone the repository to
+- Navigate to the desired directory to which you want to clone the repository to
 - [Copy & Paste] git clone https://github.com/khanh-devos/awesome-books.git
 
 ### Prerequisites
 
 In order to run this project you need:
-
 - Basic knowledge of HTML and CSS
 - Basic knderstanding of Linters
 - Basic understanding of Github
+- Your machine should have Chrome and VSCode installed 
 
 ### Setup
 
@@ -88,13 +88,13 @@ Clone this repository to your desired folder:
 
 Install this project with:
 
-- Don't need to be installed
+- You need to install Chrome if you want to see it working locally
 
 ### Usage
 
 To run the project, execute the following command:
 
-- just visit this link https://github.com/khanh-devos/awesome-books
+- open index.html with Chrome or other browsers.
 
 ### Run tests
 
@@ -106,9 +106,7 @@ To run tests, run the following command:
 
 ### Deployment
 
-You can deploy this project using:
-
-- github Pages
+You can deploy any service you want. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -144,7 +142,7 @@ You can deploy this project using:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/khanh-devos/awesome-books/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -160,7 +158,7 @@ If you like this project give it a ⭐️
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse
+I would like to say thank all co-authors and contributors
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -168,8 +166,6 @@ I would like to thank Microverse
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+This project is [MIT](./MIT) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
