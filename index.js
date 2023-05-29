@@ -1,9 +1,9 @@
 function showBooks() {
   const container = document.querySelector('.container');
-  const addBooks = JSON.parse(sessionStorage.getItem('addBooks'));
-  
-  const mybooks = addBooks ? addBooks : [];
-  
+  const addBooks = JSON.parse(localStorage.getItem('addBooks'));
+
+  const mybooks = addBooks || [];
+
   container.innerHTML = '';
   const bookCards = mybooks.map((b) => `
     <ul style="list-style: none">
@@ -24,10 +24,10 @@ function addNew(e) {
 
   const title = document.querySelector('#title');
   const author = document.querySelector('#author');
-  const addBooks = JSON.parse(sessionStorage.getItem('addBooks'));
-  
-  const mybooks = addBooks ? addBooks: []; 
-  
+  const addBooks = JSON.parse(localStorage.getItem('addBooks'));
+
+  const mybooks = addBooks || [];
+
   const id = mybooks.length === 0 ? 0 : mybooks[mybooks.length - 1].id + 1;
 
   const book = {
@@ -37,15 +37,15 @@ function addNew(e) {
   };
 
   mybooks.push(book);
-  sessionStorage.setItem('addBooks', JSON.stringify(mybooks));
+  localStorage.setItem('addBooks', JSON.stringify(mybooks));
   showBooks();
 }
 
 function removeBook(id) {
-  let addBooks = JSON.parse(sessionStorage.getItem('addBooks'));
-  addBooks = addBooks.filter(e => e.id !== id )
+  let addBooks = JSON.parse(localStorage.getItem('addBooks'));
+  addBooks = addBooks.filter((e) => e.id !== id);
 
-  sessionStorage.setItem('addBooks', JSON.stringify(addBooks));
+  localStorage.setItem('addBooks', JSON.stringify(addBooks));
   showBooks();
 }
 
