@@ -45,7 +45,6 @@ function addNew(e) {
 function removeBook(id) {
   let addBooks = JSON.parse(sessionStorage.getItem('addBooks'));
   addBooks = addBooks.filter(e => e.id !== id )
-  console.log(id, addBooks);
 
   sessionStorage.setItem('addBooks', JSON.stringify(addBooks));
   showBooks();
@@ -55,10 +54,6 @@ function removeBook(id) {
 window.onload = () => {
   showBooks();
   document.querySelector('form').addEventListener('submit', addNew);
-
-  //   document.querySelector('form').addEventListener('input', saveFormData);
-
-//   recallFormData();
 };
 
 showBooks();
