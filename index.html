@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="stylesheet" href="style.css">
     <script src="./index.js"></script>
 
@@ -13,16 +13,21 @@
 </head>
 
 <body>
-    <h1>Awesome books</h1>
-    <!-- Container of the books -->
-    <div class="container">
 
-    </div>
-    <form id="form" method="POST">
-        <input type="text" placeholder="Title" id="title" required><br>
-        <input type="text" placeholder="Author" id="author" required><br>
-        <input type="submit" value="Add" />
-    </form>
+    <main>
+        <div class="book-list">
+            <h1>Awesome books</h1>
+            <!-- Container of the books -->
+            <div class="container">
+            </div>
+            <div class="line"></div>
+            <form id="form" method="POST">
+                <input type="text" placeholder="Title" id="title" required>
+                <input type="text" placeholder="Author" id="author" required>
+                <button type="submit" value="Add" class="btn">Add</button>
+            </form>
+        </div>
+    </main>
 
 </body>
 
