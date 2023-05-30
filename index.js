@@ -1,11 +1,14 @@
 class Book {
-  constructor (){}
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
 
   static showBooks() {
     const container = document.querySelector('.container');
     const addBooks = JSON.parse(localStorage.getItem('addBooks'));
     const mybooks = addBooks || [];
-  
+
     container.innerHTML = '';
     const bookCards = mybooks.map((b) => `
       <ul class="book-ul">
@@ -19,24 +22,24 @@ class Book {
     `);
     container.innerHTML = bookCards.join('');
   }
-  
+
   static addNew(e) {
     e.preventDefault();
 
     const title = document.querySelector('#title');
     const author = document.querySelector('#author');
     const addBooks = JSON.parse(localStorage.getItem('addBooks'));
-  
+
     const mybooks = addBooks || [];
-  
+
     const id = mybooks.length === 0 ? 0 : mybooks[mybooks.length - 1].id + 1;
-  
+
     const book = {
       id,
       title: title.value,
       author: author.value,
     };
-  
+
     mybooks.push(book);
     localStorage.setItem('addBooks', JSON.stringify(mybooks));
     Book.showBooks();
@@ -46,12 +49,11 @@ class Book {
   static removeBook(id) {
     let addBooks = JSON.parse(localStorage.getItem('addBooks'));
     addBooks = addBooks.filter((e) => e.id !== id);
-  
+
     localStorage.setItem('addBooks', JSON.stringify(addBooks));
     Book.showBooks();
   }
 }
-
 
 window.onload = () => {
   Book.showBooks();
