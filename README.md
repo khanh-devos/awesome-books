@@ -134,7 +134,8 @@ You can deploy any service you want.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Add Some Styling**
+- [ ] **Styling**
+- [ ] **Animation**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
