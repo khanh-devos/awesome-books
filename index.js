@@ -13,10 +13,10 @@ class Book {
     const bookCards = mybooks.map((b) => `
       <ul class="book-ul">
         <li>
-          <h3>${b.title}</h3>
-          <h3>${b.author}</h3>
-          <button onclick=Book.removeBook(${b.id})>Remove</button>
-          <hr>
+          <h3>"${b.title}"
+          by
+          ${b.author}</h3>
+          <button class='btn' onclick=Book.removeBook(${b.id})>Remove</button>
         </li>
       </ul>
     `);
