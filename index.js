@@ -10,6 +10,13 @@ class Book {
     const mybooks = addBooks || [];
 
     container.innerHTML = '';
+
+    if (mybooks.length === 0) {
+      container.style.border = 'none';
+    } else {
+      container.style.border = '2px black solid';
+    }
+
     const bookCards = mybooks.map((b) => `
       <ul class="book-ul">
         <li>
