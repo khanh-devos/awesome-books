@@ -50,7 +50,7 @@
 - **Display Books**
 - **Add books with author and title**
 - **Remove them**
-- **save the data in session storage**
+- **save the data in local storage**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -116,7 +116,9 @@ You can deploy any service you want.
 
 👤 **Khanh**
 
-- GitHub: [@khanh-devos](https://github.com/khanh-devos)
+- GitHub: [khanh-devos](https://github.com/khanh-devos)
+- Twitter: [@khanhror](https://twitter.com/home?lang=en)
+- LinkedIn: [Khanh RoR](https://www.linkedin.com/in/khanh-than-trong-3b4344246/)
 
 👤 **Jallouh**
 

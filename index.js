@@ -6,7 +6,7 @@ function showBooks() {
 
   container.innerHTML = '';
   const bookCards = mybooks.map((b) => `
-    <ul style="list-style: none">
+    <ul class="book-ul">
       <li>
         <h3>${b.title}</h3>
         <h3>${b.author}</h3>
@@ -53,7 +53,3 @@ window.onload = () => {
   showBooks();
   document.querySelector('form').addEventListener('submit', addNew);
 };
-
-showBooks();
-addNew();
-removeBook();
