@@ -115,7 +115,6 @@ ul:nth-child(even) {
   height: 2px;
   background-color: #474747;
   width: 200px;
-  margin-block: 10px;
   border-radius: 2.5px;
   margin-block: 20px;
 }
