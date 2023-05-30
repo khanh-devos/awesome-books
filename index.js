@@ -53,3 +53,5 @@ window.onload = () => {
   showBooks();
   document.querySelector('form').addEventListener('submit', addNew);
 };
+
+removeBook();
