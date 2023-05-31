@@ -22,6 +22,11 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
 body {
   background-color: #025464;
   color: #f8f1f1;
