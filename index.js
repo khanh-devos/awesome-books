@@ -60,9 +60,47 @@ class Book {
     localStorage.setItem('addBooks', JSON.stringify(addBooks));
     Book.showBooks();
   }
+
+  static showIt(id) {
+    const sectionList = ['list-section', 'add-section', 'about-section']
+    
+    sectionList.forEach(e => {
+      if (e === id) {
+        document.querySelector(`#${e}`).setAttribute("data-visible", "true");
+      }
+      else {
+        document.querySelector(`#${e}`).setAttribute("data-visible", "false");
+      }
+    })
+    
+  }
+
+  static showNaviagtionBar() {
+    const navigation = document.querySelector('#navigation-container');
+  
+    navigation.innerHTML = `<nav>
+      <ul>
+          <li class="nav-link active" data-page="list" 
+          onclick='Book.showIt("list-section")'>List</li>
+  
+          <li class="nav-link" data-page="addNew"
+          onclick='Book.showIt("add-section")'>Add new</li>
+  
+          <li class="nav-link" data-page="contact"
+          onclick='Book.showIt("about-section")'>Contact</li>
+      </ul>
+    </nav>`
+  }
+
 }
+
+
+
+
 
 window.onload = () => {
   Book.showBooks();
   document.querySelector('form').addEventListener('submit', Book.addNew);
+
+  Book.showNaviagtionBar();
 };
