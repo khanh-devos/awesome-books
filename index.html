@@ -14,19 +14,39 @@
 
 <body>
 
+    <header>
+        <nav>
+            <ul>
+                <li class="nav-link active" data-page="list">List</li>
+                <li class="nav-link" data-page="addNew">Add new</li>
+                <li class="nav-link" data-page="contact">Contact</li>
+            </ul>
+        </nav>
+    </header>
     <main>
-        <div class="book-list">
+        <section class="book-list " id="list-section" >
             <h1>Awesome books</h1>
             <!-- Container of the books -->
             <div class="container">
             </div>
-            <div class="line"></div>
+
+        </section>
+
+        <section class="" id="add-section">
+            <h1>Add new book</h1>
             <form id="form" method="POST">
                 <input type="text" placeholder="Title" id="title" required>
                 <input type="text" placeholder="Author" id="author" required>
                 <button type="submit" value="Add" class="btn">Add</button>
             </form>
-        </div>
+        </section>
+
+        <section class="hidden" id="about-section">
+            <h1>Contact Information</h1>
+            <div class="">
+
+            </div>
+        </section>
     </main>
 
 </body>
