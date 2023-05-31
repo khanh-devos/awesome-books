@@ -19,6 +19,7 @@ h2 {
 
 h1 {
   font-size: 3rem;
+  text-align: center;
 }
 
 body {
@@ -157,7 +158,7 @@ nav > ul li {
 }
 
 .contact-information li {
-  width: 150px;
+  width: 100px;
   display: flex;
   justify-content: center;
   font-size: 1.2rem;
@@ -220,7 +221,7 @@ footer a:hover {
 .contact-information p {
   padding-bottom: 15px;
   color: #e8aa42;
-  font-size: 17px;
+  font-size: 12px;
 }
 
 .contact-information ul {
@@ -253,5 +254,13 @@ footer a:hover {
   nav > ul li.active {
     color: #f69a4a;
     cursor: pointer;
+  }
+
+  .contact-information li {
+    width: 150px;
+  }
+
+  .contact-information p {
+    font-size: 17px;
   }
 }
