@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 
 body,
 h1,
@@ -14,18 +14,28 @@ p {
 h1,
 h2 {
   margin-bottom: 15px;
+  font-weight: 700;
 }
 
+h1 {
+  font-size: 3rem;
+}
+
+body {
+  background-color: #025464;
+  color: #f8f1f1;
+}
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
+  justify-content: start;
+  height: 85vh;
+  margin-top: 100px;
 }
 
 .container {
-  border: 2px solid black;
+  background: #f8f1f1;
   border-radius: 10px;
   padding: 5px;
 }
@@ -44,17 +54,18 @@ main {
 .btn {
   all: unset;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 ul li button.btn {
-  background: white;
+  background: #f8f1f1;
   padding: 5px;
   color: #000;
 }
 
 button:hover {
   border: 1px solid #000;
+  font-weight: 600;
 }
 
 #form {
@@ -69,15 +80,16 @@ button:hover {
   width: 250px;
   height: 20px;
   padding: 5px;
+  border-radius: 8px;
 }
 
 #form input:focus-visible {
-  outline: #474747 auto 1px;
+  outline: #e57c23 auto 1px;
   border-radius: 5px;
 }
 
 #form button {
-  background-color: #474747;
+  background-color: #e57c23;
   color: #fff;
   align-self: end;
   padding: 10px;
@@ -85,8 +97,8 @@ button:hover {
 
 #form button:focus,
 #form button:hover {
-  background-color: #fff;
-  color: #474747;
+  background-color: #e8aa42;
+  color: #fff;
   border: 1px solid #474747;
 }
 
@@ -102,21 +114,51 @@ ul li {
 
 ul {
   padding: 0;
-  background-color: #777;
-  margin-block: 2px;
+  background-color: #e57c23;
+  margin-block: 4px;
   border-radius: 5px;
 }
 
 ul:nth-child(even) {
-  background-color: #474747;
+  background-color: #e8aa42;
 }
 
 .line {
   height: 2px;
-  background-color: #474747;
+  background-color: #e57c23;
   width: 200px;
+  margin-block: 10px;
   border-radius: 2.5px;
   margin-block: 20px;
+}
+
+nav > ul {
+  display: flex;
+  width: 100%;
+  background-color: #025464;
+  justify-content: center;
+  padding-top: 20px;
+}
+nav > ul li {
+  display: flex;
+  width: 100px;
+  background-color: #025464;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+nav > ul li:hover {
+  color: #f69a4a;
+  cursor: pointer;
+}
+
+nav > ul li.active {
+  color: #f69a4a;
+  cursor: pointer;
+}
+
+section[data-visible="false"] {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
