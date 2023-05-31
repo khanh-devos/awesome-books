@@ -24,7 +24,7 @@
         </nav>
     </header>
     <main>
-        <section class="book-list " id="list-section" >
+        <section class="book-list " id="list-section" data-visible="true">
             <h1>Awesome books</h1>
             <!-- Container of the books -->
             <div class="container">
@@ -32,7 +32,7 @@
 
         </section>
 
-        <section class="" id="add-section">
+        <section class="" id="add-section" data-visible="false">
             <h1>Add new book</h1>
             <form id="form" method="POST">
                 <input type="text" placeholder="Title" id="title" required>
@@ -41,13 +41,22 @@
             </form>
         </section>
 
-        <section class="hidden" id="about-section">
+        <section class="hidden" id="about-section" data-visible="false">
             <h1>Contact Information</h1>
-            <div class="">
-
+            <div class="contact-information">
+                <p>Do you have any questions or you just want to say "Hello" ? <br> You can reach out to us:</p>
+                <ul>
+                    <li><a href="https://github.com/Mofuhidy">Fuhidy</a></li>
+                    <li><a href="https://github.com/khanh-devos">Khanh</a></li>
+                    <li><a href="https://github.com/aradradev">Jalloh</a></li>
+                </ul>
             </div>
         </section>
     </main>
+
+    <footer class="footer-section">
+          <a href="https://github.com/khanh-devos/awesome-books/blob/main/MIT.md">&copy; Copyright</a>
+    </footer>
 
 </body>
 
