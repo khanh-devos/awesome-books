@@ -13,7 +13,7 @@ class Book {
 
     const bookCards = mybooks.map((b) => `
       <ul class="book-ul">
-        <li>
+        <li class="book-li">
           <h3>"${b.title}"
           by
           ${b.author}</h3>
