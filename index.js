@@ -63,7 +63,6 @@ class Book {
 
   static showIt(id) {
     const sectionList = ['list-section', 'add-section', 'about-section'];
-    const navLinks = document.querySelectorAll('.nav-link');
 
     sectionList.forEach((e) => {
       if (e === id) {
@@ -72,13 +71,15 @@ class Book {
         document.querySelector(`#${e}`).setAttribute('data-visible', 'false');
       }
     });
+  }
 
-    navLinks.forEach((nav) => {
-      const active = nav.classList.contains('active');
-      if (active) {
-        nav.classList.toggle('active');
-      }
+  static toggleActive(id) {
+    const links = document.querySelectorAll('.nav-link');
+    links.forEach((link) => {
+      link.classList.remove('active');
     });
+    const clickedLink = document.getElementById(id);
+    clickedLink.classList.add('active');
   }
 
   static showNaviagtionBar() {
@@ -86,14 +87,14 @@ class Book {
 
     navigation.innerHTML = `<nav>
       <ul>
-          <li class="nav-link active" data-page="list" 
-          onclick='Book.showIt("list-section")'>List</li>
+          <li class="nav-link active" id="list" 
+          onclick='Book.showIt("list-section");  Book.toggleActive("list");' >List</li>
   
-          <li class="nav-link" data-page="addNew"
-          onclick='Book.showIt("add-section")'>Add new</li>
+          <li class="nav-link" id="addNew"
+          onclick='Book.showIt("add-section");  Book.toggleActive("add-section");' >Add new</li>
   
-          <li class="nav-link" data-page="contact"
-          onclick='Book.showIt("about-section")'>Contact</li>
+          <li class="nav-link" id="contact"
+          onclick='Book.showIt("about-section"); Book.toggleActive("cotact");' >Contact</li>
       </ul>
     </nav>`;
   }
