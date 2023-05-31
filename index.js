@@ -12,9 +12,9 @@ class Book {
     container.innerHTML = '';
 
     if (mybooks.length === 0) {
-      container.style.border = 'none';
+      container.style.background = 'none';
     } else {
-      container.style.border = '2px black solid';
+      container.style.background = '#f8f1f1';
     }
 
     const bookCards = mybooks.map((b) => `
@@ -62,22 +62,28 @@ class Book {
   }
 
   static showIt(id) {
-    const sectionList = ['list-section', 'add-section', 'about-section']
-    
-    sectionList.forEach(e => {
+    const sectionList = ['list-section', 'add-section', 'about-section'];
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    sectionList.forEach((e) => {
       if (e === id) {
-        document.querySelector(`#${e}`).setAttribute("data-visible", "true");
+        document.querySelector(`#${e}`).setAttribute('data-visible', 'true');
+      } else {
+        document.querySelector(`#${e}`).setAttribute('data-visible', 'false');
       }
-      else {
-        document.querySelector(`#${e}`).setAttribute("data-visible", "false");
+    });
+
+    navLinks.forEach((nav) => {
+      const active = nav.classList.contains('active');
+      if (active) {
+        nav.classList.toggle('active');
       }
-    })
-    
+    });
   }
 
   static showNaviagtionBar() {
     const navigation = document.querySelector('#navigation-container');
-  
+
     navigation.innerHTML = `<nav>
       <ul>
           <li class="nav-link active" data-page="list" 
@@ -89,14 +95,9 @@ class Book {
           <li class="nav-link" data-page="contact"
           onclick='Book.showIt("about-section")'>Contact</li>
       </ul>
-    </nav>`
+    </nav>`;
   }
-
 }
-
-
-
-
 
 window.onload = () => {
   Book.showBooks();
