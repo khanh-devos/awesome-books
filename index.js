@@ -91,10 +91,10 @@ class Book {
           onclick='Book.showIt("list-section");  Book.toggleActive("list");' >List</li>
   
           <li class="nav-link" id="addNew"
-          onclick='Book.showIt("add-section");  Book.toggleActive("add-section");' >Add new</li>
+          onclick='Book.showIt("add-section");  Book.toggleActive("addNew");' >Add new</li>
   
           <li class="nav-link" id="contact"
-          onclick='Book.showIt("about-section"); Book.toggleActive("cotact");' >Contact</li>
+          onclick='Book.showIt("about-section"); Book.toggleActive("contact");' >Contact</li>
       </ul>
     </nav>`;
   }
