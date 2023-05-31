@@ -109,6 +109,18 @@ class Book {
   
     `;
   }
+
+  static showTime() {
+    const dateTime = document.querySelector('.time');
+    const timeDate = () => {
+      setInterval(() => {
+        const date = new Date().toUTCString();
+        dateTime.innerHTML = date.toString().substring(0, date.indexOf(' GMT'));
+      }, 0);
+    };
+
+    timeDate();
+  }
 }
 
 window.onload = () => {
@@ -116,14 +128,5 @@ window.onload = () => {
   document.querySelector('form').addEventListener('submit', Book.addNew);
 
   Book.showNaviagtionBar();
-
-  const dateTime = document.querySelector('.time');
-  const timeDate = () => {
-    setInterval(() => {
-      const date = new Date().toUTCString();
-      dateTime.innerHTML = date.toString().substring(0, date.indexOf(' GMT'));
-    }, 0);
-  };
-
-  timeDate();
+  Book.showTime();
 };
