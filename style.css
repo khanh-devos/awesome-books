@@ -88,6 +88,8 @@ button:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: fit-content;
+  margin: auto;
 }
 
 #form input {
@@ -156,10 +158,11 @@ ul:nth-child(even) {
 
 nav > ul li {
   display: flex;
-  width: 100px;
+  width: fit-content;
   background-color: #025464;
   justify-content: center;
   font-size: 1.2rem;
+  margin: 5px;
 }
 
 .contact-information li {
