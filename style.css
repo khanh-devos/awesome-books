@@ -27,6 +27,10 @@ h2 {
   text-align: center;
 }
 
+h5 {
+  color: #f69a4a;
+}
+
 body {
   background-color: #025464;
   color: #f8f1f1;
@@ -136,15 +140,35 @@ ul {
   border-radius: 5px;
 }
 
-nav > ul {
+header {
   display: flex;
-  width: 100%;
-  background-color: #025464;
-  justify-content: center;
-  padding-top: 20px;
+  height: 60px;
 }
 
-ul:nth-child(even) {
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-inline: 10px;
+}
+
+nav ul {
+  display: flex;
+  background-color: #025464;
+  justify-content: center;
+}
+
+.contact-information ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f1f1;
+  box-shadow: 0 3px 2px black;
+}
+
+.container ul:nth-child(even) {
   background-color: #e8aa42;
 }
 
@@ -156,12 +180,12 @@ ul:nth-child(even) {
   margin-block: 20px;
 }
 
-nav > ul li {
+nav ul li {
   display: flex;
   width: fit-content;
   background-color: #025464;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   margin: 5px;
 }
 
@@ -232,15 +256,6 @@ footer a:hover {
   font-size: 12px;
 }
 
-.contact-information ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background-color: #f8f1f1;
-  box-shadow: 0 3px 2px black;
-}
-
 .container p a {
   color: #f49543;
   text-decoration: underline;
@@ -255,8 +270,24 @@ footer a:hover {
 }
 
 @media screen and (min-width: 768px) {
+  h5 {
+    font-size: 1.4rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-inline: 20px;
+  }
+
   ul li {
     width: 600px;
+  }
+
+  nav ul li {
+    font-size: 1.2rem;
   }
 
   nav > ul li.active {

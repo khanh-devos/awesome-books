@@ -94,6 +94,7 @@ class Book {
     const navigation = document.querySelector('#navigation-container');
 
     navigation.innerHTML = `<nav>
+    <h5>Awesome Books</h5>
       <ul>
           <li class="nav-link active" id="list" 
           onclick='Book.showIt("list-section");  Book.toggleActive("list");' >List</li>
