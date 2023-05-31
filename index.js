@@ -11,12 +11,6 @@ class Book {
 
     container.innerHTML = '';
 
-    if (mybooks.length === 0) {
-      container.style.background = 'none';
-    } else {
-      container.style.background = '#f8f1f1';
-    }
-
     const bookCards = mybooks.map((b) => `
       <ul class="book-ul">
         <li>
@@ -27,7 +21,21 @@ class Book {
         </li>
       </ul>
     `);
-    container.innerHTML = bookCards.join('');
+
+    if (mybooks.length === 0) {
+      container.style.background = 'none';
+      container.innerHTML = `<p>There is no books yet</p>
+      <p>
+      go to Add new tab and add a book !
+      <a class="nav-link" id="addNew"
+          onclick='Book.showIt("add-section");  Book.toggleActive("addNew");' >Add new</a>
+      </p>
+      
+      `;
+    } else {
+      container.style.background = '#f8f1f1';
+      container.innerHTML = bookCards.join('');
+    }
   }
 
   static addNew(e) {
