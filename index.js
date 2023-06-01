@@ -48,7 +48,7 @@ class Book {
       <h4>New book successfully added</h4>
     </div>
     `;
-    setTimeout(() => popWin.remove(), 2000);
+    setTimeout(() => popWin.remove(), 4000);
   }
 
   static addNew(e) {
