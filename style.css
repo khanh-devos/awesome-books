@@ -279,7 +279,7 @@ footer a:hover {
 .pop-win {
   position: fixed;
   top: 0;
-  left: 3;
+  left: 0;
   width: 100%;
   padding: 100px 0;
 }
