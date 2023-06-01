@@ -276,6 +276,24 @@ footer a:hover {
   padding-right: 15px;
 }
 
+.pop-win {
+  position: fixed;
+  top: 0;
+  left: 3;
+  width: 100%;
+  padding: 100px 0;
+}
+
+.msg-win {
+  margin: auto;
+  border-radius: 3px;
+  width: 200px;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #e57c23;
+  box-shadow: 0 3px 2px black;
+}
+
 @media screen and (min-width: 768px) {
   h5 {
     font-size: 1.4rem;
