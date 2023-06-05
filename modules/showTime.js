@@ -1,10 +1,12 @@
+import { DateTime } from './luxon.js';
+
 const showTime = () => {
   const dateTime = document.querySelector('.time');
   const timeDate = () => {
     setInterval(() => {
-      const date = new Date().toUTCString();
-      dateTime.innerHTML = date.toString().substring(0, date.indexOf(' GMT'));
-    }, 0);
+      const date = DateTime.now().toJSDate();
+      dateTime.innerHTML = date;
+    }, 1000);
   };
 
   timeDate();

@@ -20,8 +20,8 @@ const addNew = (e) => {
 
   mybooks.push(book);
   localStorage.setItem('addBooks', JSON.stringify(mybooks));
-  showBooks();
   showPopWin();
+  showBooks();
   document.querySelector('form').reset();
 };
 
