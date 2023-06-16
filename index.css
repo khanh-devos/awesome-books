@@ -134,7 +134,7 @@ ul li {
   justify-content: space-between;
   width: 300px;
   align-items: center;
-  height: 30px;
+  height: auto;
   padding: 5px;
   color: #fff;
 }
